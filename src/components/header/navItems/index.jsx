@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
-import Icon from "../../../assets/Icon";
 
-const NavItems = ({ text }) => {
+const NavItems = ({ text, icon, to }) => {
   return (  
     <>
-      <li>
-        <Link to='/'>
-          <Icon id="home"/>
-          <span>{ text }</span>
-        </Link>
-      </li>
+      <ul>
+        <li>
+          <Link to={to} className="flex items-center px-4 py-2">
+            <div className="px-1 py-1">{ icon }</div>
+            <span className="pl-1">{ text }</span>
+          </Link>
+        </li>
+      </ul>
     </>
   );
 }

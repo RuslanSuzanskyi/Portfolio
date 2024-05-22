@@ -5,7 +5,7 @@ import NavList from "./navList";
 
 const Header = () => {
   return (  
-    <header className=" h-20 p-2 flex items-center">
+    <header className="z-50 fixed left-0 top-0 bg-[#1b1a2ea9] w-full h-16 p-2 flex items-center font-medium backdrop-blur shadow-lg shadow-[#1b1a2ea9]">
       <Wrapper>
         <nav className="flex items-center justify-between">
           <div className="w-12 h-12">
@@ -13,7 +13,9 @@ const Header = () => {
               <LogoIcon />
             </Link>
           </div>
-          <NavList />
+          <div className="flex items-center gap-6">
+            <NavList />
+          </div>
         </nav>
       </Wrapper>
     </header>
