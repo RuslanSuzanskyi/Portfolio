@@ -1,3 +1,4 @@
+import { ExternalLink } from "react-external-link";
 import { Link } from "react-router-dom";
 
 const NavList = ({ items = [] }) => {
@@ -8,7 +9,7 @@ const NavList = ({ items = [] }) => {
           <li key={item.id} className="flex items-center justify-center">
             {index === items.length - 1 ? 
             (
-              <Link to={item.to} 
+              <ExternalLink href="https://github.com/RuslanSuzanskyi/Portfolio" 
                 className="
                 bg-[#934cce5e] 
                   flex 
@@ -17,7 +18,8 @@ const NavList = ({ items = [] }) => {
                   h-9 
                   rounded-md 
                   border-none 
-                  px-6 relative 
+                  px-7 
+                  relative 
                   transition 
                   duration-[400ms]
                 hover:bg-[#623686]
@@ -25,7 +27,7 @@ const NavList = ({ items = [] }) => {
                 "
               >
                 <div>{item.icon}</div>
-              </Link>
+              </ExternalLink>
             ) : 
             ( 
               <Link to={item.to} className="flex items-center px-4 py-2 transition duration-[400] underline-animation">

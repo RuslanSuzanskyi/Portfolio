@@ -9,5 +9,5 @@ export const items = [
   {id: 2, text: "About", to: "/about", icon: <IconAbout />},
   {id: 3, text: "Projects", to: "/projects", icon: <IconProjects />},
   {id: 4, text: "Resume", to: "/resume", icon: <IconResume />},
-  {id: 5, to: "/fork", icon: <IconLink />},
+  {id: 5, icon: <IconLink />},
 ]
