@@ -3,10 +3,24 @@ import { ReactComponent as LogoIcon } from "../../assets/logo.svg";
 import Wrapper from "../wrapper/Wrapper";
 import NavList from "./navList";
 import { items } from "../constants";
+import { useState } from "react";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const navMenu = 'z-50 fixed left-0 top-0 w-full h-16 p-2 flex items-center font-medium transition-all duration-300 ease-out';
+
+  function scrollHandler() {
+    if (window.scrollY >= 20) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  }
+
+  window.addEventListener('scroll', scrollHandler);
+
   return (  
-    <header className="z-50 fixed left-0 top-0 bg-[#1b1a2ea9] w-full h-16 p-2 flex items-center font-medium backdrop-blur-lg shadow-md shadow-[#1b1a2ea9]">
+    <header className={`${navMenu} ${isScrolled ? 'shadow-[#1b1a2ea9] bg-[#1b1a2ea9] backdrop-blur-lg shadow-md' : 'bg-transparent'}`}>
       <Wrapper>
         <nav className="flex items-center justify-between">
           <div className="w-12 h-12">
