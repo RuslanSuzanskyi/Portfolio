@@ -30,7 +30,7 @@ const NavList = ({ items = [] }) => {
               </ExternalLink>
             ) : 
             ( 
-              <Link to={item.link} className="flex items-center px-4 py-2 transition duration-[400] underline-animation">
+              <Link to={item.url} className="flex items-center px-4 py-2 transition duration-[400] underline-animation">
                 <div>{item.icon}</div>
                 <span className="pl-1">{item.text}</span>
               </Link>

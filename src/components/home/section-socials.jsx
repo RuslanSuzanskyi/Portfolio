@@ -12,7 +12,7 @@ const SectionSocials = () => {
             <ul className="flex items-center justify-center gap-4">
               {socials.map(social => 
                 <li key={social.id}>
-                  <Link to={social.link} target="_blank">
+                  <Link to={social.url} target="_blank">
                     {social.icon}
                   </Link>
                 </li>
