@@ -17,9 +17,6 @@ const SectionAbout = () => {
               I also apply my passion for developing with <span className="text-[#cd5ff8] font-bold">PHP, Typescript, Node.js, Python, etc.</span>
             </p>
           </div>
-          <div>
-
-          </div>
         </div>
       </Wrapper>
     </section>
